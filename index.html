@@ -7,6 +7,33 @@
     <title>Document</title>
   </head>
   <body>
+    <main class="timer">
+      <h1 class="timer__title">timer</h1>
+      <div class="timer__clock"></div>
+      <div class="timer__icon">
+        <span><i class="fas fa-check"></i></span>
+      </div>
+      <div class="timer__circle">
+        <div class="display__box">
+          <input type="number" id="hour" class="display__input" value="00" min="0" max="99" />
+          <label for="hour" class="display__label">hours</label>
+        </div>
+        <div class="display__box">
+          <input type="number" id="minutes" class="display__input" value="00" min="0" max="60" />
+          <label for="minutes" class="display__label">minutes</label>
+        </div>
+        <div class="display__box">
+          <input type="number" id="seconds" class="display__input" value="00" min="0" max="60" />
+          <label for="seconds" class="display__label">seconds</label>
+        </div>
+      </div>
+    </main>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
     <script src="js/index.js"></script>
   </body>
 </html>
