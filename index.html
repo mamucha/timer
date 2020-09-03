@@ -9,22 +9,33 @@
   <body>
     <main class="timer">
       <h1 class="timer__title">timer</h1>
-      <div class="timer__clock"></div>
-      <div class="timer__icon">
-        <span><i class="fas fa-check"></i></span>
-      </div>
-      <div class="timer__circle">
-        <div class="display__box">
-          <input type="number" id="hour" class="display__input" value="00" min="0" max="99" />
-          <label for="hour" class="display__label">hours</label>
-        </div>
-        <div class="display__box">
-          <input type="number" id="minutes" class="display__input" value="00" min="0" max="60" />
-          <label for="minutes" class="display__label">minutes</label>
-        </div>
-        <div class="display__box">
-          <input type="number" id="seconds" class="display__input" value="00" min="0" max="60" />
-          <label for="seconds" class="display__label">seconds</label>
+      <div class="timer__clock">
+        <svg class="clock__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <g class="clock__circle">
+            <circle class="clock__path-elapsed" cx="50" cy="50" r="45"></circle>
+            <path
+              id="clock-path-remaining"
+              stroke-dasharray="283"
+              class="clock__path-remaining"
+              d="
+                M 50, 50
+                m -45, 0
+                a 45,45 0 1,0 90,0
+                a 45,45 0 1,0 -90,0
+              "
+            ></path>
+          </g>
+        </svg>
+        <div class="clock__label">
+          <div class="clock__setTime">
+            <input type="number" id="minutes" class="display__input" value="0" min="0" max="60" />
+            <label for="minutes" class="display__label">minutes</label>
+            <div class="timer__icon">
+              <span class="timer__icon--start"><i class="fas fa-play-circle"></i></span>
+            </div>
+          </div>
+
+          <span id="clock-label" class="clock__label clock__label--timer"></span>
         </div>
       </div>
     </main>

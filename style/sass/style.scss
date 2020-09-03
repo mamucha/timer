@@ -31,6 +31,7 @@
   }
 
   &__path-remaining {
+    color: rgb(65, 184, 131);
     stroke-width: 7px;
     stroke-linecap: round;
     transform: rotate(90deg);
@@ -58,6 +59,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 48px;
+    font-size: 28px;
+
+    &--timer {
+      display: none;
+    }
+  }
+
+  &__setTime {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+    & div {
+      grid-column: 1 / 3;
+      text-align: center;
+      & span {
+        cursor: pointer;
+      }
+    }
+
+    &--hide {
+      display: none;
+    }
   }
 }
