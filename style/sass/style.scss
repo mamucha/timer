@@ -113,3 +113,14 @@
 .h-hide {
   display: none;
 }
+
+@media only screen and (min-width: 1024px) {
+  .clock__label {
+    @include size(500px);
+    font-size: 48px;
+  }
+
+  .timer__clock {
+    @include size(500px);
+  }
+}
