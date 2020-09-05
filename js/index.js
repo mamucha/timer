@@ -1,4 +1,4 @@
-document.querySelector('.timer__icon').addEventListener('click', () => {
+document.querySelector('.clock__icon').addEventListener('click', () => {
   let timeLimit = Number(document.querySelector('.display__input').value) * 60;
   let timeLeft = timeLimit;
   let WARNING_THRESHOLD = timeLimit / 2;
@@ -23,11 +23,18 @@ document.querySelector('.timer__icon').addEventListener('click', () => {
   document.getElementById('clock-label').innerHTML = formatTime(timeLeft);
   document.querySelector('.clock__label--timer').classList.remove('clock__label--timer');
   document.querySelector('.clock__setTime').classList.add('clock__setTime--hide');
-  document.querySelector('.timer__icon--start').style.display = 'none';
+  document.querySelector('.clock__icon--start').style.display = 'none';
 
   startTimer();
 
   function onTimesUp() {
+    document.querySelector('.clock__alarm> audio').play();
+    document.getElementById('clock-label').style.display = 'none';
+    document.querySelector('.clock__icon--refresh').classList.add('h-refresh');
+    document.querySelector('.clock__icon--refresh').addEventListener('click', () => {
+      window.location.reload();
+    });
+
     clearInterval(timerInterval);
   }
 

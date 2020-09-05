@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style/css/style.min.css" />
-    <title>Document</title>
+    <title>Timer</title>
   </head>
   <body>
     <main class="timer">
@@ -30,14 +34,18 @@
           <div class="clock__setTime">
             <input type="number" id="minutes" class="display__input" value="0" min="0" max="60" />
             <label for="minutes" class="display__label">minutes</label>
-            <div class="timer__icon">
-              <span class="timer__icon--start"><i class="fas fa-play-circle"></i></span>
+            <div class="clock__icon">
+              <span class="clock__icon--start"><i class="fas fa-play-circle"></i></span>
             </div>
           </div>
 
           <span id="clock-label" class="clock__label clock__label--timer"></span>
+          <span class="clock__icon--refresh h-hide"><i class="fas fa-redo"></i></span>
         </div>
       </div>
+      <section class="clock__alarm">
+        <audio src="assets/alarm.mp3" controls loop></audio>
+      </section>
     </main>
     <link
       rel="stylesheet"
